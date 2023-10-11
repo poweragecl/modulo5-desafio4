@@ -186,6 +186,7 @@ body{
 .single-pizza-price{
   margin-top: 24px;
   font-size: 24px;
+  margin-bottom: 24px;
 }
 
 .brand-name a{
@@ -222,17 +223,23 @@ body{
 .cart-item-list{
   display: flex;
   flex-direction: column;
-  gap: 16px; 
+  gap: 4px; 
 }
 
 .cart-item{
     display: flex;
+    justify-content: space-between;
     background-color: rgba(255,255,255,.1);
-    padding: 12px;
+    padding: 12px 24px;
     align-items: center;
     gap: 12px;
     color: #fff;
     border-radius: 6px;
+}
+
+.cart-item .column{
+  width: 100%;
+  text-align: left;
 }
 
 .cart-item img{
@@ -243,4 +250,9 @@ body{
 .cart-item-title{
   font-size: 16px;
   text-transform: capitalize;
+}
+
+.cart-page-title{
+  color: #fff;
+  margin: 24px 0;
 }

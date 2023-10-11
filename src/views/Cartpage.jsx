@@ -9,14 +9,30 @@ export const Cartpage = () => {
         <>
 
             <div className="wrapper">
-                <h1>Cart Page</h1>
+                <h1 className="cart-page-title">Cart Page</h1>
                 <ul className="cart-item-list">
                 {cartItems.map((c, index) => (
                     <li key={index} className="cart-item">
-                        <img src={c.imagen} alt={c.nombre} />
-                        <h4 className="cart-item-title">{c.nombre}</h4>
-                        <p>{c.precio.toLocaleString('es-CL', {style: 'currency', currency: 'CLP' })}</p>
-                        <p>{c.cantidad}</p>
+
+                        <div className="column">
+                            <img src={c.imagen} alt={c.nombre} />
+                        </div>
+
+                        <div className="column">
+                            <h4 className="cart-item-title">{c.nombre}</h4>
+                        </div>
+
+                        <div className="column">
+                            <p>{c.precio.toLocaleString('es-CL', {style: 'currency', currency: 'CLP' })}</p>
+                        </div>
+
+                        <div className="column">
+                            <p>{c.cantidad}</p>
+                        </div>
+                        
+                        
+                        
+                        
                     </li>
                 ))}
 
